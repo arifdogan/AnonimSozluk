@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnonimSozluk.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,13 @@ namespace AnonimSozluk.WebApp.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            BusinessLayer.Test t = new BusinessLayer.Test();
             return View();
+        }
+
+        public PartialViewResult GetTopics()
+        {
+            
+            return PartialView("_PartialTopic");
         }
 
     }

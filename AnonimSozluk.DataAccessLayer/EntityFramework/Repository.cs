@@ -23,9 +23,19 @@ namespace AnonimSozluk.DataAccessLayer.EntityFramework
             return objectSet.ToList();
         }
 
+        public List<T> List(Expression<Func<T,bool>>where)
+        {
+            return objectSet.Where(where).ToList();
+        }
+
         public IQueryable<T> ListQueryable()
         {
             return objectSet.AsQueryable<T>();
+        }
+
+        public T Find(Expression<Func<T, bool>> where)
+        {
+            return objectSet.FirstOrDefault(where);
         }
 
         public int Insert(T obj)

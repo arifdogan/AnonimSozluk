@@ -9,7 +9,7 @@ namespace AnonimSozluk.DataAccessLayer.EntityFramework
     public class RepositoryBase
     {
         protected static DatabaseContext context;
-        static Object lockObject = new Object();
+        static object lockObject = new object();
 
         protected RepositoryBase()
         {
@@ -24,7 +24,7 @@ namespace AnonimSozluk.DataAccessLayer.EntityFramework
                 {
                     if (context == null)
                     {
-                        DatabaseContext context = new DatabaseContext();
+                        context = new DatabaseContext();
                     }
                 }
             }
