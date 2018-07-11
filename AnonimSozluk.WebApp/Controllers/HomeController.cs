@@ -11,6 +11,7 @@ namespace AnonimSozluk.WebApp.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            BusinessLayer.Test t = new BusinessLayer.Test();
             return View();
         }
 

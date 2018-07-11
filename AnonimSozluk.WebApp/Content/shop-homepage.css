@@ -7,8 +7,8 @@
 body {
   padding-top: 54px;
 }
-#backTopic :hover{
-    background-color:lightgray;
+#backTopic :hover {
+    background-color: #f2f2f2;
 }
 
 @media (min-width: 992px) {
